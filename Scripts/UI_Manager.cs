@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class UI_Manager : MonoBehaviour {
 
 //	public TextMesh threeDText;
-
-
 	public Canvas startGame;
 	public GameObject player;
 
@@ -21,7 +19,6 @@ public class UI_Manager : MonoBehaviour {
 	{
 		_renderer = GetComponent<MeshRenderer>();
 		_playerHealth = player.GetComponent<PlayerHealth>();
-
 	}
 
 	void Start()
@@ -53,9 +50,8 @@ public class UI_Manager : MonoBehaviour {
 		{
 			startGame.enabled = true;
 		}
-
-
 	}
+
 	public void LoadGame()
 	{
 		SceneManager.LoadScene(0);

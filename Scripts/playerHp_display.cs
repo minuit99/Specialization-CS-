@@ -16,14 +16,12 @@ public class playerHp_display : MonoBehaviour
 	{
 		_playerHealth = player.GetComponent<PlayerHealth>();
 		_uiManager = menuText.GetComponent<UI_Manager>();
-	
 	}
 
 	void Start()
 	{
 		_rect = new Rect(Screen.width * 0.06f, Screen.height * 0.90f, Screen.width * 0.03f, Screen.height * 30000f);
 		_texture = Resources.Load ("Textures/bar") as Texture;
-			
 	}
 
 	void OnGUI()
@@ -33,16 +31,5 @@ public class playerHp_display : MonoBehaviour
 			Rect newRect = new Rect(_rect.x, _rect.y - i * Screen.width * 0.035f, _rect.width, _rect.width);
 			GUI.DrawTexture(newRect, _texture);
 		}
-
 	}
-
-//	void Update()
-//	{
-//		if(_uiManager.startGame.enabled)
-//		{
-//			
-//		}
-//	}
-
-
 }

@@ -40,7 +40,7 @@ public class Enemy_Ninja: MonoBehaviour
 
 		if(dist <= 7.0f)
 		{
-			//TODO change _distance with dist for neat
+			//TODO change _distance with dist
 			if(_distance == new Vector3(1,0,0))
 			{
 				transform.localEulerAngles = new Vector3(0,0,0);
@@ -101,7 +101,7 @@ public class Enemy_Ninja: MonoBehaviour
 		{
 			_grounded = true;
 		}
-		//Uncomment when ready cuz its overkill
+		//Uncomment when ready  its overkill
 //		if (col.gameObject.tag == "Player") 
 //		{
 //			HittingPlayer();

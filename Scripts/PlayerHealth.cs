@@ -16,10 +16,8 @@ public class PlayerHealth : MonoBehaviour
 	public GameObject Hp;
 	public GameObject bullet;
 
-
 	void Awake ()
 	{
-		
 		_playerMovement = GetComponent <PlayerMovement> ();
 		_rend = GetComponent<Renderer>();
 		currentHealth = _startingHealth;
@@ -35,7 +33,6 @@ public class PlayerHealth : MonoBehaviour
 
 	}
 
-
 	void AddHealth()
 	{
 		currentHealth ++;
@@ -44,7 +41,6 @@ public class PlayerHealth : MonoBehaviour
 			canDoSpecial = true;
 			_rend.material.color = Color.yellow;
 		} 
-
 	}
 
 	public void TakeHealth (int pDamage) //pass value for damage done
@@ -78,17 +74,13 @@ public class PlayerHealth : MonoBehaviour
 				AddHealth();
 				Destroy(col.gameObject);
 			}
-
 		}
 		if(col.gameObject.tag == "Bullet")
 		{
 			TakeHealth(1);
 			Destroy(col.gameObject);
-
 		}
-
 	}
-
 
 	IEnumerator PlayerFlashing (int pNumFlashes, float pSeconds)
 	{
@@ -96,10 +88,7 @@ public class PlayerHealth : MonoBehaviour
 		{
 			_rend.enabled = !_rend.enabled;
 			yield return new WaitForSeconds(pSeconds);
-		
 		}
-
-
 		if (!isDead) 
 		{
 			_rend.enabled = true;
@@ -110,7 +99,5 @@ public class PlayerHealth : MonoBehaviour
 			color.a -= 0.9f;
 			_rend.material.color = color;
 		}
-
-
 	}
 }

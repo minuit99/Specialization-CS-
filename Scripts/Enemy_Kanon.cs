@@ -20,28 +20,22 @@ public class Enemy_Kanon : MonoBehaviour
 	public Rigidbody     bullet;
 	public Transform     canonPosition;
 
-
-
 	void Awake()
 	{
 		_playerHealth = player.GetComponent<PlayerHealth>();
 		_playerAttack = player.GetComponent<PlayerAttack>();
 		_cannCurrentHp = _enemyStartingHp;
-
 	}
 
 	void Update()
 	{
-
 		float dist = Vector3.Distance(transform.position, player.transform.position);
 		if (!_isShooting && dist <= _playerDistance)
 		{
 			_isShooting = true;
 			StartCoroutine(Shoot());
 		}
-
 	}
-
 
 	IEnumerator Shoot()
 	{
@@ -87,13 +81,8 @@ public class Enemy_Kanon : MonoBehaviour
 		CancelInvoke("HittingPlayer");
 	}
 
-
-
 	void HittingPlayer()
 	{
 		_playerHealth.TakeHealth(1);
 	}
-
-
-
 }

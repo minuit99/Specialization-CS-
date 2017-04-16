@@ -8,8 +8,6 @@ public class Breaking_Wall : MonoBehaviour {
 
 	private Renderer _rend;
 
-
-
 	void Start()
 	{
 		_rend = GetComponent<Renderer>();
@@ -35,5 +33,4 @@ public class Breaking_Wall : MonoBehaviour {
 			_currentHp--;
 		}
 	}
-
 }

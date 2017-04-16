@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-
 	private float _speed = 5f;
 	private float _jumpSpeed = 400f;
 	private bool _grounded = true;
@@ -12,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
 	private UI_Manager _uiManager;
 	private Rigidbody _rb;
 	public GameObject canonTop; 
-
 
 	void Awake()
 	{
@@ -23,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update ()
 	{
-
-
 		//leftside down
 		//transform.position + new Vector3(-0.5f,-1,0)
 		//transform.position + new Vector3(0.5f,-1,0)
@@ -46,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
 	
 	}
 
-
 	void Movement ()
 	{
 
@@ -55,8 +50,6 @@ public class PlayerMovement : MonoBehaviour
 
 		transform.Translate (moveDirection);
 	}
-		
-
 
 	void Jump()
 	{
@@ -119,8 +112,4 @@ public class PlayerMovement : MonoBehaviour
 			Time.timeScale = 0;
 		}
 	}
-
-
-
-
 }

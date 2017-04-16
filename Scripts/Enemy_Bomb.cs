@@ -16,10 +16,6 @@ public class Enemy_Bomb : MonoBehaviour
 	public GameObject ninja;
 	public Transform playerTransform;
 
-
-
-
-
 	void Start()
 	{
 		_playerHealth = player.GetComponent<PlayerHealth>();
@@ -27,7 +23,6 @@ public class Enemy_Bomb : MonoBehaviour
 		_ps = GetComponent<ParticleSystem>();
 		_mRend = GetComponent<MeshRenderer>();
 //		_bCol = GetComponent<BoxCollider>();
-
 
 	}
 
@@ -40,9 +35,7 @@ public class Enemy_Bomb : MonoBehaviour
 			_timeToBoom -= Time.deltaTime; //delay counter if player hits the bomb only once
 			if(_timeToBoom < 0)
 			{
-				
 				Boom();
-
 			}
 
 		}
@@ -52,8 +45,7 @@ public class Enemy_Bomb : MonoBehaviour
 
 		}
 	}
-
-
+		
 	void OnTriggerEnter(Collider trig)
 	{
 		if(trig.gameObject.tag == "Sword")
@@ -66,9 +58,7 @@ public class Enemy_Bomb : MonoBehaviour
 			_damaged += 0.5f;
 		}
 	}
-
-
-
+		
 	public void Boom()
 	{
 		Destroy();
@@ -88,8 +78,6 @@ public class Enemy_Bomb : MonoBehaviour
 //		else 
 //			_enemyNinja.hitByBomb = false;
 	}
-		
-
 
 	void HittingPlayer()
 	{
