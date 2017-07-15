@@ -1,5 +1,7 @@
 # CSharp-Spec
-Scripts folder includes all the scripts used for the project.
+This is my specialization project on gameplay programming in C# in Unity 3D.
+The goal for this project was to create a game in Unity and learn C#. 
+
 
 Controls
 
